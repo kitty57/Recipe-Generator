@@ -18,6 +18,16 @@ def main():
         recipe = generate_recipe(preference, ingredients,allergies)
         st.subheader("Generated Recipe")
         st.info(recipe)
+        st.session_state.ingredients_input = ""
+        st.session_state.preference = ""
+        st.session_state.allergies=""
 
 if __name__ == "__main__":
+    if "ingredients_input" not in st.session_state:
+        st.session_state.ingredients_input = ""
+    if "preference" not in st.session_state:
+        st.session_state.preference = ""
+    if "allergies" not in st.session_state:
+        st.session_state.allergies=""
+
     main()
