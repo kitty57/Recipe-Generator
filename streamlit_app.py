@@ -17,7 +17,7 @@ def main():
     if st.button("Generate Recipe"):
         recipe = generate_recipe(preference, ingredients,allergies)
         st.subheader("Generated Recipe")
-        st.markdown(recipe)
+        st.info(recipe)
 
 if __name__ == "__main__":
     main()
